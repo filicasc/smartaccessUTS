@@ -23,10 +23,10 @@ def clear(entered_code):
 def verify_code(test_label, code):
     code_func = code.get()
     try:
-        mySQLConnection = mysql.connector.connect(host='buildingaccess.cuzrbhg1j8lc.us-east-1.rds.amazonaws.com',
-                                                  database='building_access',
-                                                  user='casciofil',
-                                                  password='buildingaccessdbpass1')
+        mySQLConnection = mysql.connector.connect(host='',
+                                                  database='',
+                                                  user='',
+                                                  password='')
         cursor = mySQLConnection.cursor(buffered=True)
         sql_select_query = "SELECT * FROM codes WHERE access_code = %s"
         cursor.execute(sql_select_query, (code_func,))
